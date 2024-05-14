@@ -160,7 +160,7 @@ public class ContactDatabase extends AbstractDatabase {
 
         Integer maxcapa = this.Countcapacity(dorm);
 
-        if ( maxcapa <= 5){
+        if ( maxcapa < 5){
 
         
             pStatement.setString(1, dorm);

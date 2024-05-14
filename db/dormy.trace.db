@@ -192,3 +192,18 @@ UPDATE student SET student_dorm = ? WHERE id = ? AND gender = ? [90012-212]
 	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169)
 	at pbo.f01.model.ContactDatabase.AssignDorm(ContactDatabase.java:169)
 	at pbo.f01.driver.Driver1.main(Driver1.java:58)
+2024-05-14 18:12:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Parameter "#1" is not set; SQL statement:
+UPDATE student SET student_dorm = ? WHERE id = ? AND gender = ? [90012-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:186)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:164)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:209)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169)
+	at pbo.f01.model.ContactDatabase.AssignDorm(ContactDatabase.java:171)
+	at pbo.f01.driver.Driver1.main(Driver1.java:58)

@@ -163,10 +163,14 @@ public class ContactDatabase extends AbstractDatabase {
         if ( maxcapa <= 5){
 
         
-        pStatement.setString(1, dorm);
-        pStatement.setString(2, id);
-        pStatement.setString(3, gender);
+            pStatement.setString(1, dorm);
+            pStatement.setString(2, id);
+            pStatement.setString(3, gender);
         //}
+        } else{
+            pStatement.setString(1, "None");
+            pStatement.setString(2, id);
+            pStatement.setString(3, gender);
         }
         pStatement.executeUpdate();
 

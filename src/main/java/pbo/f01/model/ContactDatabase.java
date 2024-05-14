@@ -158,14 +158,16 @@ public class ContactDatabase extends AbstractDatabase {
 
         // Integer capacity = ((ResultSet) statement).getInt("dorm_capacity");
 
-        // Integer maxcapa = this.Countcapacity(dorm);
+        Integer maxcapa = this.Countcapacity(dorm);
 
-        //if ( maxcapa <= capacity){
+        if ( maxcapa <= 5){
+
+        
         pStatement.setString(1, dorm);
         pStatement.setString(2, id);
         pStatement.setString(3, gender);
         //}
-
+        }
         pStatement.executeUpdate();
 
         pStatement.close();
